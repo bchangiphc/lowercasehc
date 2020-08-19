@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"log"
 	"strings"
 	"regexp"
 	"net/http"
@@ -37,10 +36,8 @@ func New(ctx context.Context, next http.Handler, config *Config, name string) (h
 
 func (a *Lowercase) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 	var uppercaseChars = regexp.MustCompile(`.*[A-Z].*`)
-	var path = req.URL.Path
-	if (uppercaseChars.MatchString(path)) {
-    log.Printf("Lowercase Middleware fixing uppercase characters: %s", strings.ToLower(path))
-		http.Redirect(rw, req, strings.ToLower(path) , http.StatusMovedPermanently)
+	if (uppercaseChars.MatchString(req.URL.Path)) {
+		http.Redirect(rw, req, strings.ToLower(req.URL.Path) , http.StatusMovedPermanently)
 	} else {
 		a.next.ServeHTTP(rw, req)
 	}
