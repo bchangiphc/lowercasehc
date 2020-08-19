@@ -3,3 +3,4 @@ type: middleware
 import: github.com/trinnylondon/lowercase
 summary: If the URL has any uppercase characters redirect the user to the lowercase equivalent.
 testData: #no test data needed
+  none: needed
