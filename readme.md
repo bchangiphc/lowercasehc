@@ -9,7 +9,7 @@ Enable the plugin in your Traefik configuration:
 ```
 [experimental.plugins.lowercase]
   modulename = "github.com/trinnylondon/lowercase"
-  version = "v0.1.0"
+  version = "v0.1.1"
 ```
 
 Create a Middleware. Note that this plugin does not need any configuration, however, values must be passed in for it to be accepted within Traefik.
