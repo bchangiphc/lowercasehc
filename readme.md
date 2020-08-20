@@ -1,6 +1,6 @@
-# Lowercase Traefik plugin
+# Enforce Lowercase URL
 
-Lowercase is a plugin that checks the URL path for uppercase characters. If any are present the user will be redirected to the lowercase equivalent via a 301.
+Enforce Lowercase URL is a Traefik plugin that checks the URL path for uppercase characters. If any are present the user will be redirected to the lowercase equivalent via a 301.
 
 ### Configuration
 
