@@ -23,5 +23,5 @@ metadata:
 spec:
   plugin:
     lowercase:
-      none: needed
+      unused: var
 ```
