@@ -1,4 +1,4 @@
-displayName: Enforce Lowercase URL
+displayName: Enforce Lowercase URL HC
 type: middleware
 import: github.com/bchangiphc/lowercasehc
 summary: If the URL path has any uppercase characters redirect the user to the lowercase equivalent.

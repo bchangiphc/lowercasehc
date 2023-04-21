@@ -1,4 +1,4 @@
-package lowercase
+package lowercasehc
 
 import (
 	"context"
