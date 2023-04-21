@@ -8,7 +8,7 @@ Enable the plugin in your Traefik configuration:
 
 ```
 [experimental.plugins.lowercase]
-  modulename = "github.com/trinnylondon/lowercase"
+  modulename = "github.com/bchangiphc/lowercasehc"
   version = "v0.1.2"
 ```
 
@@ -19,7 +19,7 @@ Create a Middleware. Note that this plugin does not need any configuration, howe
 apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
-  name: lowercase
+  name: lowercasehc
 spec:
   plugin:
     lowercase:

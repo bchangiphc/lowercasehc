@@ -1,6 +1,6 @@
 displayName: Enforce Lowercase URL
 type: middleware
-import: github.com/trinnylondon/lowercase
+import: github.com/bchangiphc/lowercasehc
 summary: If the URL path has any uppercase characters redirect the user to the lowercase equivalent.
 testData: #no test data needed
   unused: var

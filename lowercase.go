@@ -30,7 +30,7 @@ func New(ctx context.Context, next http.Handler, config *Config, name string) (h
 
 func (a *Lowercase) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 	if uppercaseChars.MatchString(req.URL.Path) {
-		http.Redirect(rw, req, strings.ToLower(req.URL.Path), http.StatusMovedPermanently)
+		http.Redirect(rw, req, strings.ToLower(req.URL.Path) + "?" + req.URL.RawQuery, http.StatusMovedPermanently)
 	} else {
 		a.next.ServeHTTP(rw, req)
 	}
